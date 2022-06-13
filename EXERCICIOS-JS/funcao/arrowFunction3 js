@@ -1,0 +1,21 @@
+let comparaComThis = function (param){
+    console.log(this === param)
+}
+
+comparaComThis(global)  // nesse contexto ele aponta para o objeto global
+
+const obj = {}
+comparaComThis = comparaComThis.bind(obj) // nesse caso alteramos o apontamento para o obj
+
+comparaComThis(global)  //Então essa comparação agora é falsa pois o parâmetro agora aponta para o obj definido e não mais para o objeto global 
+comparaComThis(obj)
+
+let comparaComThisArrow = param => console.log(this === param)
+
+comparaComThisArrow(global)
+comparaComThisArrow(module.exports)
+
+comparaComThisArrow = comparaComThisArrow.bind(obj)
+
+comparaComThisArrow(obj)
+comparaComThisArrow(module.exports)
