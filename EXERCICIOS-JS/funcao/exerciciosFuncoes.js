@@ -425,4 +425,8 @@ console.log(vendeVeiculo('motocicleta'))
 console.log(vendeVeiculo('caminhonete'))
 console.log(vendeVeiculo('Aeronave'))
 
+<<<<<<< HEAD
 console.log('---------------------------------------------------------------------------------------------------')
+=======
+console.log('--------------------------------------------------------------------------------------------------')
+>>>>>>> 35343b2 (resolvendo lista de exercicios - Funções)
