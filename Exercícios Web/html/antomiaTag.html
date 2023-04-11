@@ -1,0 +1,37 @@
+
+<!-- Estrutura de tags -->
+<tag>
+    <bla>
+        <opa> Texto </opa>
+        <opa> Texto </opa>
+        <opa> Texto </opa>
+        <opa> Texto </opa>
+    </bla>
+</tag>
+
+
+<!-- Tags que não tem fechamento --> 
+    <meta><br><input>
+<!-- Tags que não tem corpo --> 
+    <tag /><meta /><br /><input />
+
+<!-- colocando parâmetros na tag com corpo-->
+<tag param1="valor1" param2="valor2">
+    <!-- corpo da tag -->
+</tag>
+
+<!-- colocando parâmetros na tag sem corpo-->
+<tag param1="valor1" param2="valor2" />
+
+
+<!-- tags com propriedade padrões -->
+<input type="text">
+<input type="button" value="">
+<input type="checkbox" name="" id="">
+<input type="date" name="" id="">
+
+<!-- tags com propriedades customizadas -->
+<input type="text" cod3r-cpf>
+
+<!-- criar uma tag customizada (geralmente é utilizada em componetes)  -->
+<Calendario> </Calendario> 
