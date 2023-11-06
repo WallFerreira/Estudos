@@ -1,0 +1,74 @@
+<!-- Dentro da tabela temos 3 grandes regioes:
+  - Cabeçalho
+  - Corpo
+  - Rodapé
+-->
+<table> 
+    <caption>Produtos</caption>
+    <!-- thead : table head / Define o cabeçalho da tabela -->
+    <thead> 
+        <tr>
+            <th>Produto</th>
+            <th>Preço</th>
+            <th>Quantidade</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>iPad</td>
+            <td>3289,00</td>
+            <td>5</td>
+            <td>16445,00</td>
+
+        </tr>
+        <tr>
+            <td>Samsung S12</td>
+            <td>2648,00</td>
+            <td>8</td>
+            <td>21192,00</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <!-- A tag TD possui uma propriedade onde é possível controla quantas colunas ele vai ocupar na tabela
+            Basta utilizar a propriedade COLSPAN e informar a quantidade de colunas. -->
+            <td colspan="3">Total</td>
+            <td>37637,00</td>
+        </tr>
+        <tr>
+            <!-- da mesma forma, podemos utilizar o ROWSPAN para dizer quantas linhas vamos querer ocupar -->
+        </tr>
+    </tfoot>
+</table>
+
+<style>
+    table{
+        border-collapse: collapse;
+    }
+    th, td {
+        padding: 10px;
+    }
+
+    thead tr{
+        border-bottom: solid 3px #444;
+        
+    }
+    
+    tbody tr:hover{
+        background-color: #dedede;
+    }
+
+    tfoot{
+        background-color: #444;
+        color: #fff;
+        font-weight: bold;
+    }
+</style>
+
+
+<!-- 
+    <th> -> table head.. usado para criar cabeçalho de colunas na tabela
+    <td> -> table dada.. usado para informar o dado dentro das linha da tabela
+    <tr> -> table row.. usado para criar linhas dentro da tabela    
+ -->
