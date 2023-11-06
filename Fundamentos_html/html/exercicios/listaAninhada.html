@@ -1,5 +1,5 @@
 <h1>Projeto</h1>
-<ul>
+<ul class="tree">
     <li>
         <span wm-folder>backend</span>
         <ul>
@@ -39,8 +39,9 @@
 <script>
     document.querySelectorAll('[wm-folder]').forEach(folder => {
         folder.onclick = function(e) {
-            console.log('teste')
+            const ul =  folder.nextElementSibling
+            const d =  ul.style.display 
+            ul.style.display = d === 'none' ? 'block' : 'none' // esse efeito Block mostra o bloco e o none faz sumir
     }
 })
 </script>
-
