@@ -1,0 +1,59 @@
+<h1>Formulário</h1>
+
+
+<form action="api/posturl" method="post">
+    <div>
+        <label for="Texto:">Texto: </label>
+        <input type="text" id="idtexto" name="idtexto">
+    </div>
+    <div>
+        <label for="idpassword">Senha: </label>
+        <input type="password" name="idpassword" id="idpassword">
+    </div>
+    <div>
+        <label for="iddate">Data: </label>
+        <input type="date" name="iddate" id="iddate">
+    </div>
+    <div>
+        <label for="idfile">Arquivo: </label>
+        <input type="file" name="idfile" id="idfile">
+    </div>
+    <div>
+        <label for="idemail">Email: </label>
+        <input type="email" name="idemail" id="idemail">
+    </div>
+    <div>
+        <label for="idcheck1">Check 1: </label>
+        <input type="checkbox" name="idcheck1" id="idcheck1">
+
+        <label for="idcheck2">Check 2: </label>
+        <input type="checkbox" name="idcheck2" id="idcheck2">
+
+        <label for="idcheck3">Check 3: </label>
+        <input type="checkbox" name="idcheck3" id="idcheck3">
+    </div>  
+    <div>
+        <label for="idradio1">Radio 1: </label>
+        <input type="radio" name="idradio" id="idradio1">
+
+        <label for="idradio2">Radio 2: </label>
+        <input type="radio" name="idradio" id="idradio2">
+    </div> 
+    <div>
+        <label for="idtextarea">Caixa de texto: </label>
+        <textarea  name="idtexto" id="idtexto" rows="5" cols="10"></textarea>
+    </div>
+    <div>
+        <select name="Selecao" id="">
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="js">JAVASCRIPT</option>
+            <option value="vue">VUE.JS</option>
+
+        </select> <br><br>
+    </div>
+        <input type="button" onclick="alert('Oooii!')" value="botão">
+        <input type="submit" value="Enviar Form">
+        <input type="reset" value="Limpar">
+    
+</form>
