@@ -1,7 +1,7 @@
 <div class="wm-slider">
 
     <p>
-    <img src="http://files.cod3r.com.br/curso-web/imagem1.jpg" alt="Barreira de pedras" width="513" height="342"
+        <img src="http://files.cod3r.com.br/curso-web/imagem1.jpg" alt="Barreira de pedras" width="513" height="342"
             title="Barreira de pedras no mar">
     </p>
 
@@ -39,10 +39,11 @@
 <!-- ------------------------ STILO CSS  ------------------------ -->
 
 <style>
-
-    p{
-        
+    p {
+        position: absolute;
+        display: none;
     }
+
     .circular {
         width: 513px;
         background-color: #444;
@@ -65,3 +66,40 @@
         background-size: 200%;
     }
 </style>
+
+<script>
+    const elementos = Array.from(document.querySelectorAll("[wm-slider] > p"))
+ 
+    const alteraVisibilidade = elemento => {
+        const visibilidadeElemento = elemento.style.display
+ 
+        return visibilidadeElemento === "none" || visibilidadeElemento === "" ?
+            elemento.style.display = "block" :
+            elemento.style.display = "none"
+    }
+ 
+    function mover(elemento, posicaoAtual, posicaoFinal, passoPorPixel, callback) {
+        const novaPosicao = posicaoAtual + passoPorPixel
+ 
+        if (posicaoAtual <= posicaoFinal) {
+            elemento.style.left = novaPosicao + "px"
+ 
+            setTimeout(() => mover(elemento, novaPosicao, posicaoFinal, passoPorPixel, callback), 1)
+        } else {
+            alteraVisibilidade(elemento)
+ 
+            callback()
+        }
+    }
+ 
+    function slider(posicaoElemento = 0) {
+        const elemento = elementos[posicaoElemento]
+        const proximoElemento = ++posicaoElemento % elementos.length
+ 
+        alteraVisibilidade(elemento)
+ 
+        mover(elemento, -elemento.clientWidth, innerWidth, 1, () => slider(proximoElemento))
+    }
+ 
+    slider()
+</script>
