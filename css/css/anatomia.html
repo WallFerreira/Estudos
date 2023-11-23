@@ -5,7 +5,32 @@
     <meta charset="UTF-8">
     <title>Anatomia CSS</title>
     <style>
-        /* ... */
+        .selector {
+            color: #fff;
+            font-size: 30px;
+            text-align: center;
+            /* multiplos valores */
+            border: solid 5px rgb(15, 4, 117); /* shorhand property*/
+            font-family: Arial, Helvetica, sans-serif;
+            width: calc(100% -400);
+            background-color: rgb(89, 143, 204);
+        }
+
+        /* Usando uma pseudo-classe */
+
+        .selector:hover {
+            background-color: crimson;
+        }
+
+        /*  Usando um pseudo-elemento */
+
+        /* Padrão de nomenclatura */
+        /* dash-casa ou camelCase ?  --> nesse curso usaremos o dash-case.. mais padrão no mercado */
+
+        .selector::first-letter{
+            font-size: 60px;
+            font-weight: bold;
+        }
     </style>
 </head>
 
