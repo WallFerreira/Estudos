@@ -5,12 +5,18 @@
     <meta charset="UTF-8">
     <title>Origem CSS: Externo, Interno e Inline</title>
     <style>
-        /* ... */
+        body{
+            background-color: aquamarine;
+        }
     </style>
+    <link rel="stylesheet" href="css/externo.css"> 
+    <!-- essa folha de estilo vai ser aplicada pois o código dá preferência para o ultimo processado -->
 </head>
 
-<body>
+<body style="background-color: limegreen;"> 
+    <!-- No é recomendado colocar style diretamente nas tags..
+    Style em tags tem prioridade no processamento e sempre serão exibidas, pois tem preferência sobre todos os estilos (NÃO É BOA PRATICA) -->
     <h1>E agora?</h1>
 </body>
 
-</html>
+</html> 
