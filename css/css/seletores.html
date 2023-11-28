@@ -6,7 +6,24 @@
     <title>CSS Selectors</title>
     <link rel="stylesheet" href="css/tag.css">
     <style>
-        /* ... */
+        /* 
+        (*) Seletetor universal, aplica o efeito para todos os elementos
+        (.) .. seletor PONTO, é para representar uma classe.. ou seja, será aplicado o estilo somente para quem tem a classe especificada
+        (#) Seletor ID, esse seletor é semelhante ao da classe, mas pode ser utilizado para mais coisa dentro do código.
+        (>) Seletor queaplica o estilo ao elemento filho direto selecionado dentro do ID, exemplo --> ( #aninhado > div )
+        ( ) Seletor ESPAÇO, permite aplicar o estilo a todos os descendentes a baixo do ID informado, exemplo --> (#aninhado section)
+        (+) Seletor de "siblins / irmaõs" só funciona se os elementos estiverem um ao lado do outro, exemplo --> (p + ul)
+        (~) Seletor de "siblins general / demais irmãos " aplica o efeito a outros elementos irmãos,  exemplo --> (p ~ ol)
+        ([]) Seletor propriedade. procura elementos que tem o atributo e aplica o estilo,  exemplo --> ([feira])
+        ([]=valor) Seletor propriedade / valor, procura elementos que tem exatamente o atributo com valor indicado, exemplo --> ([feira=casa])
+        ([]~=valor) Seletor propriedade / valor, procura elementos que tem atributo com valor indicado, mesmo que não seja exatamente, exemplo --> ([feira~=casa])
+        ([]*=valor) Seletor que verifica se no valor da propriedade possui o valor contido, exemplo --> ([feira*=casa])
+        (tag.nth-child(1)) Seletor que envolve filho, aplica o estilo ao primeito filho com tag inficada, exemplo --> (span.nth-child(1))  
+        section > span:nth-of-type(2) --> outra forma do exemplo acima.. no caso, esse exemplo está aplicando o efeito em todos os filhos impares dentro de uma section */ 
+        * {
+            color: #ff0;
+            background-color: #f77;
+        }
     </style>
 </head>
 
