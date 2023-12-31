@@ -1,1 +1,1 @@
-repositório de estudos
+Repositório de estudos de programação 
